@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>primeiro projeto</title>
+	<style>
+		.container {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h2>minutos</h2>
+		<select name="minutos" id="minutos"></select>
+
+		<h2>segundos</h2>
+		<select name="segundos" id="segundos"></select>
+		<br/>
+
+		<button id="comecar">começar!
+
+		</button>
+		<div id="display">
+			<h3>
+
+			</h3>
+		</div>
+	</div>
+	<!--Container-->
+
+	<script>
+		var display = document.getElementById("display");
+
+		var seg = document.getElementById("segundos");
+		var min = document.getElementById("minutos");
+
+		var com = document.getElementById("comecar");
+
+		var cronometro, mina, sega, intervalo;
+
+		for (var i = 0; i < 60; i++) {
+			min.innerHTML += '<option value="' + i + '">' + i + '</option>';
+		}
+		for (var i = 1; i < 60; i++) {
+			segundos.innerHTML += '<option value="' + i + '">' + i + '</option>';
+		}
+
+		com.addEventListener('click', function () {
+			mina = min.value;
+			sega = seg.value;
+
+			display.childNodes[1].innerHTML = mina + ":" + sega;
+
+			intervalo = setInterval(function () {
+				sega--;
+				if(sega <=0){
+					if(mina > 0){
+						mina--;
+						sega = 59;
+					
+					}else{
+						alert("acabou")
+						clearInterval(intervalo);
+					}
+
+				}
+				display.childNodes[1].innerHTML = mina + ":" + sega;
+
+			}, 1000);
+		}
+		)
+
+	</script>
+
+</body>
+
+</html>
