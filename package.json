@@ -1,0 +1,22 @@
+{
+  "name": "cronometro",
+  "version": "1.0.0",
+  "description": "testando o express",
+  "main": "testenode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FCPhenrique/cronometro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FCPhenrique/cronometro/issues"
+  },
+  "homepage": "https://github.com/FCPhenrique/cronometro#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
